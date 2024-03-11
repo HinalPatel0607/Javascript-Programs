@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if the number is Positive Negative Or Zero</title>
+</head>
+<body>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="checkAndDisplay()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkNumberType(number){
+        if (number === 0){
+            return "Zero";
+        }
+        else if(number>0){
+            return "Positive";
+        }
+        else{
+            return "Negative";
+        }
+    }
+
+    function checkAndDisplay(){
+        var inputNumber = parseFloat(document.getElementById("numberInput").value);
+        var result =checkNumberType(inputNumber);
+        document.getElementById("result").innerText = inputNumber+ " " + "is"+ " "+ result;
+    }
+  </script>
+</body>
+</html>

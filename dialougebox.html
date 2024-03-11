@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+</head>
+<body>
+
+<script>
+  function startQuiz() {
+    alert("Welcome to the JavaScript Quiz! Let's get started.");
+    
+    const playerName = prompt("Please enter your name:", "Player");
+    if (playerName !== null && playerName.trim() !== "") {
+      alert(`Great, ${playerName}! Let's begin the quiz.`);
+      askQuestion();
+    } else {
+      alert("You need to enter a valid name to start the quiz. Reload the page and try again.");
+    }
+  }
+
+  function askQuestion() {
+    const question = "What is the capital of India?";
+    const userAnswer = prompt(question, "");
+
+    if (userAnswer !== null) {
+      const correctAnswer = "Delhi";
+
+      if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+        alert("Correct! Well done!");
+      } else {
+        alert(`Incorrect. The correct answer is ${correctAnswer}.`);
+      }
+
+      const playAgain = confirm("Do you want to play again?");
+      if (playAgain) {
+        askQuestion();
+      } else {
+        alert("Thank you for playing the JavaScript Quiz!");
+      }
+    } else {
+      alert("You clicked Cancel. The quiz has been canceled.");
+    }
+  }
+</script>
+
+<button onclick="startQuiz()">Start Quiz</button>
+
+</body>
+</html>

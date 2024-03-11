@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Manipulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Array Manipulation</h2>
+  <button onclick="addValue()">Add Value</button>
+  <button onclick="removeValue()">Remove Value</button>
+  <p id="result"></p>
+
+  <script>
+    let myArray = [];
+
+    function addValue() {
+      const valueToAdd = prompt("Enter a value to add:");
+      myArray.push(valueToAdd);
+      displayResult(`Added ${valueToAdd}. Updated array: ${myArray}`);
+    }
+
+    function removeValue() {
+      if (myArray.length > 0) {
+        const removedValue = myArray.pop();
+        displayResult(`Removed ${removedValue}. Updated array: ${myArray}`);
+      } else {
+        displayResult("Array is empty, cannot remove a value.");
+      }
+    }
+
+    function displayResult(message) {
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>

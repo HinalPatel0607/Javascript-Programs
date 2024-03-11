@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time Example</title>
+    <!-- Internal JavaScript -->
+    <script>
+        function displayCurrentTime() {
+            var currentDate = new Date();
+            var currentTime = currentDate.toLocaleTimeString();
+            document.getElementById("time-display").innerHTML = "Current Time: " + currentTime;
+        }
+
+        // Call the function when the page loads
+        window.onload = function () {
+            displayCurrentTime();
+        };
+    </script>
+</head>
+<body>
+    <h1>Inline & Internal JavaScript Example</h1>
+
+    <!-- Inline JavaScript -->
+    <p>This is an example of inline JavaScript: 
+        <script>
+            document.write("Hello, this is inline JavaScript!");
+        </script>
+    </p>
+
+    <!-- Display current time using internal JavaScript -->
+    <p id="time-display"></p>
+
+</body>
+</html>

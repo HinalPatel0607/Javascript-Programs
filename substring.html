@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Substring Search</title>
+</head>
+<body>
+  <h2>Substring Search</h2>
+
+  <label for="mainString">Enter the main string:</label>
+  <input type="text" id="mainString" placeholder="Main string">
+
+  <label for="substring">Enter the substring to find:</label>
+  <input type="text" id="substring" placeholder="Substring">
+
+  <button onclick="findSubstring()">Find Substring</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findSubstring() {
+      const mainString = document.getElementById('mainString').value;
+      const substring = document.getElementById('substring').value;
+      if (mainString.includes(substring)) {
+        document.getElementById('result').textContent = `Substring '${substring}' found in the given string.`;
+      } else {
+        document.getElementById('result').textContent = `Substring '${substring}' not found in the given string.`;
+      }
+    }
+  </script>
+</body>
+</html>

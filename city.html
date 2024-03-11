@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information about a City</title>
+</head>
+<body>
+    <script>
+        function processInput(){
+            const userInput = prompt("Enter a character");
+        if (userInput ===null || userInput.trim() === ''){
+            alert("Invalid input. Please enter a character");
+            return;
+        } 
+        const firstChar =userInput.trim().toUpperCase();
+
+        const cityInfo={
+'A': 'Ahmedabad:Do visit the Sabarmati Ashram and get a rare glimpse into the life of Mahatma Gandhi',
+
+'B': 'Bangalore:Do try and time your visit during the Bangalore Karaga festival, celebrated in honour of Goddess Draupadi',
+
+'C': 'Chennai:Fort St George, the first fortress built by the British in India, is a must visit',
+
+'D': 'Daman & Diu:Make sure you visit the Dominican Mystery Ruins, also known as the Ruined Church',
+
+'E': 'Erode:Don’t miss the exceptionally good Kongunadu cuisine',
+
+'F': 'Faizabad:Do forget to try the lip-smacking chulha kebabs',
+
+'G': 'Guwahati:Do spot the one-horned rhino, the largest of all rhino species',
+
+'H': 'Hyderabad:Do visit the beautiful monument and mosque Charminar',
+
+'I': 'Indore:When in Indore, also visit Maheshwar, the centre of handloom weaving, and pick up a couple of Maheshwari sarees',
+
+'J': 'Jallandhar:Do pick up a few handcrafted parandis when in Jallandhar',
+
+'K': 'Kolkata:Art lovers must pick up couple of Kalighat paintings to adorn their walls',
+
+'L': 'Leh:Do visit the world’s highest motorable pass, Khardungla Pass',
+
+'M': 'Mumbai:Do take a stroll around chowpatty and try all the lip-smacking chaats',
+
+'N': 'New Delhi:Do visit Asia’s largest spice market',
+
+'O': 'Ooty:Hop on to the Nilgiri Toy Train and enjoy the breathtaking mountain views',
+
+'P': 'Port Blair:Do try to spot dolphins during the glass-bottomed boat cruise',
+
+'Q': 'Quilon:Do look out for Chinese coins and other antique stuff during your visit',
+
+'R': 'Raipur:Do witness an exhilarating bullock race during your visit',
+
+'S': 'Srinagar:Don’t miss the chance to visit the fragrant Mughal gardens',
+
+'T': 'Thiruvananthapuram:Do visit the Akkulam backwaters for some fun surfing',
+
+'U': 'Udaipur:Do check out the vintage car museum to get a taste of the royal grandeur',
+
+'V': 'Varanasi:Do visit the world famous Ganga aarti performed every day on the banks of the river',
+
+'W': 'Warangal:Do visit the thousand-pillar temple',
+
+'X': 'Xeldem:Do try bebinca, the traditional layer cake derived from Indo-Portuguese cuisine.',
+
+'Y': 'Yavatmal:Do visit the lovely teak forests',
+
+'Z': 'Zunheboto:To try and time your visit during the Hornbill Festival, which celebrates the Naga culture',
+};
+
+if(cityInfo[firstChar]){
+    const message = `<span style="color: #ff5733; font-weight: bold;">${cityInfo[firstChar]}</span>`;
+    document.getElementById('output').innerHTML = message;
+}else
+{
+    alert(`No city information available for the character "${firstChar}".`);
+}
+}
+</script>
+<button onclick="processInput()">Process Input</button>
+<div id="output" style="margin-top: 20px;"></div>
+
+</body>
+</html>

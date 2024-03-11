@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Styling</title>
+  <style>
+    .name {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Names and Customize Styles</h2>
+
+  <div class="name" id="name1"></div>
+  <div class="name" id="name2"></div>
+  <div class="name" id="name3"></div>
+
+  <script>
+    for (let i = 1; i <= 3; i++) {
+      const name = prompt(`Enter Name ${i}:`);
+      const backgroundColor = prompt(`Enter background color for ${name}:`);
+      const textColor = prompt(`Enter text color for ${name}:`);
+
+      const element = document.getElementById(`name${i}`);
+      element.textContent = name;
+      element.style.backgroundColor = backgroundColor;
+      element.style.color = textColor;
+    }
+  </script>
+</body>
+</html>

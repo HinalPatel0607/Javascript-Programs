@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Functions Demo</title>
+</head>
+<body>
+  <h2>String Functions Demo</h2>
+
+  <script>
+    const originalString = "Hello, World!";
+
+    document.write(`<p>Original String: ${originalString}</p>`);
+
+    document.write(`<p>Length: ${originalString.length}</p>`);
+
+    const appendedString = originalString.concat(" Have a nice day!");
+    document.write(`<p>Concatenation: ${appendedString}</p>`);
+
+    document.write(`<p>Character at position 7: ${originalString.charAt(7)}</p>`);
+
+    const substring = originalString.substring(7, 12);
+    document.write(`<p>Substring (7 to 12): ${substring}</p>`);
+
+    const indexOfComma = originalString.indexOf(",");
+    document.write(`<p>Index of ',': ${indexOfComma}</p>`);
+
+    const replacedString = originalString.replace("World", "Universe");
+    document.write(`<p>Replaced String: ${replacedString}</p>`);
+
+    document.write(`<p>Uppercase: ${originalString.toUpperCase()}</p>`);
+    document.write(`<p>Lowercase: ${originalString.toLowerCase()}</p>`);
+  </script>
+</body>
+</html>
