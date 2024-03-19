@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function Example</title>
+</head>
+<body>
+
+  <h1>Arrow Function Example</h1>
+
+  <div id="output"></div>
+
+  <script>
+    let numbers = [1, 2, 3, 4, 5];
+    
+    numbers.forEach(number => {
+      document.getElementById('output').innerHTML += number + "<br>";
+    });
+
+
+    let evenNumbers = numbers.filter(number => number % 2 === 0);
+    document.getElementById('output').innerHTML += "<br>Even Numbers: " + evenNumbers.join(", ");
+
+    let doubledNumbers = numbers.map(number => number * 2);
+    document.getElementById('output').innerHTML += "<br>Doubled Numbers: " + doubledNumbers.join(", ");
+
+    let firstEvenNumber = numbers.find(number => number % 2 === 0);
+    document.getElementById('output').innerHTML += "<br>First Even Number: " + firstEvenNumber;
+
+    let allGreaterThanZero = numbers.every(number => number > 0);
+    document.getElementById('output').innerHTML += "<br>All numbers greater than zero: " + allGreaterThanZero;
+    
+    let someGreaterThanThree = numbers.some(number => number > 3);
+    document.getElementById('output').innerHTML += "<br>Some numbers greater than three: " + someGreaterThanThree;
+
+    let descendingOrder = numbers.sort((a, b) => b - a);
+    document.getElementById('output').innerHTML += "<br>Numbers in descending order: " + descendingOrder.join(", ");
+
+  </script>
+
+</body>
+</html>
