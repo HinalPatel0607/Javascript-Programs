@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Total Cost</title>
+</head>
+<body>
+  <h1>Calculate Total Cost</h1>
+  <p id="result"></p>
+  <script>
+
+    function calculateTotalCost(...items) {
+    let totalCost = 0;
+      for (const item of items) {
+    totalCost += item.price;
+  }
+  return totalCost;
+}
+
+const item1 = { name: 'Book', price: 20 };
+const item2 = { name: 'Pen', price: 5 };
+const item3 = { name: 'Notebook', price: 10 };
+
+const totalCost = calculateTotalCost(item1, item2, item3);
+
+document.getElementById('result').textContent = `Total cost: $${totalCost}`;
+</script>
+</body>
+</html>
