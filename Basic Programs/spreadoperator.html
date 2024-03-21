@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread Operator Example</title>
+</head>
+<body>
+
+  <div id="output"></div>
+
+  <script>
+
+const numbers1 = [10, 5, 20, 15];
+const numbers2 = [25, 30, 12];
+
+const allNumbers = [...numbers1, ...numbers2];
+
+const maxNumber = Math.max(...allNumbers);
+
+const outputDiv = document.getElementById('output');
+
+outputDiv.textContent = "Maximum number: " + maxNumber;
+
+</script>
+</body>
+</html>
