@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Information</title>
+</head>
+<body>
+  <h1>Book Information</h1>
+  <div id="book-info">
+    <p>Title: <span id="title"></span></p>
+    <p>Author: <span id="author"></span></p>
+    <p>Year: <span id="year"></span></p>
+    <p>Genre: <span id="genre"></span></p>
+    <p>Summary: <span id="summary"></span></p>
+  </div>
+
+  <script>
+const book = {
+  title: 'The Great Gatsby',
+  author: 'F. Scott Fitzgerald',
+  year: 1925,
+  genre: 'Fiction',
+  getSummary: function() {
+    return `${this.title} by ${this.author}, published in ${this.year}, belongs to the ${this.genre} genre.`;
+  }
+};
+document.getElementById('title').textContent = book.title;
+document.getElementById('author').textContent = book.author;
+document.getElementById('year').textContent = book.year;
+document.getElementById('genre').textContent = book.genre;
+document.getElementById('summary').textContent = book.getSummary();
+
+</script>
+</body>
+</html>
