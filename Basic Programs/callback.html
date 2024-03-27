@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter the task">
+    <button onclick="addTask()">Add Task</button>
+    <div id="taskList">
+
+    </div>
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            const newTaskInput = document.getElementById("taskInput");
+            const newTask = newTaskInput.value.trim();
+
+            if (newTask !== ""){
+                newTaskInput.value = "";
+
+                addTaskToList(newTask, displayTasks);
+            }
+        }
+
+        function addTaskToList(taskName, callback) {
+            setTimeout(function()
+            {
+                tasks.push(taskName);
+                callback();
+            }, 1000);
+        }
+
+        function displayTasks() {
+            const taskListDiv = document.getElementById("taskList");
+            taskListDiv.innerHTML = "";
+        
+
+        tasks.forEach((task, index) => {
+            const taskItem = document.createElement("div");
+            taskItem.textContent = `${index + 1}. ${task}`;
+            taskListDiv.appendChild(taskItem);
+        });
+        }
+    </script>
+</body>
+</html>
