@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Schedular</title>
+</head>
+<body>
+    <header>
+        <h1>Task Schedular</h1>
+    </header>
+    <main>
+        <div class="task_form">Task:</label><br>
+            <input type="text" id="task" placeholder="Enter task"><br><br>
+            <label for="priority">Select the priority of the task:</label><br>
+            <select id="priority">
+                <option value="top">Top Priority</option>
+                <option value="middle">Middle Priority</option>
+                <option value="low">Low Priority</option>
+            </select><br><br>
+            <label for="deadline">Selet the deadline for the task:</label><br>
+            <input type="date" id="deadline" placeholder="Deadline of the task"><br><br>
+            <button id="add_task">Add task</button>
+        </div>
+        <div class="task_list" id="task_list">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
